@@ -1,1 +1,1 @@
-# Genius-course
+# My first project
