@@ -1,21 +1,23 @@
 .formats-section {
-  &__container {
+  &__slider {
     display: flex;
     align-items: center;
     gap: 32px;
+  }
+
+  &__container {
+    overflow: hidden;
   }
 
   &__title {
     margin-bottom: 80px;
   }
 
-  &__list {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
+  &__button {
+    display: none;
 
-  &__item {
-    flex-basis: calc((100% - 40px) / 3);
+    @media screen and (min-width: $bp-tablet) {
+      display: flex;
+    }
   }
 }

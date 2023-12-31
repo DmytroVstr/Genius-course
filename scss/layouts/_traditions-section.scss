@@ -1,8 +1,14 @@
 .traditions-section {
-  padding-top: 96px;
+  margin-top: 0;
+  padding-top: 40px;
+
+  @media screen and (min-width: $bp-desktop) {
+    padding-top: 96px;
+  }
 
   &__container {
     display: flex;
+    align-items: flex-start;
     justify-content: space-between;
     gap: 40px;
   }
@@ -12,16 +18,41 @@
   }
 
   &__title {
-    margin-bottom: 42px;
+    margin-bottom: 24px;
+
+    @media screen and (min-width: $bp-desktop) {
+      margin-bottom: 42px;
+    }
   }
 
   &__text {
-    &--limited {
-      max-width: 340px;
+    &--limited-first {
+      max-width: 350px;
+      margin-bottom: 16px;
+
+      @media screen and (min-width: $bp-desktop) {
+        max-width: 700px;
+        margin-bottom: 42px;
+      }
+    }
+
+    &--limited-second {
+      max-width: 350px;
+      margin-bottom: 0px;
     }
   }
 
   &__bakerman-photo {
-    border-radius: 400px 400px 0px 0px;
+    display: none;
+
+    @media screen and (min-width: $bp-tablet) {
+      display: block;
+      border-radius: 400px 400px 0px 0px;
+      width: 300px;
+    }
+
+    @media screen and (min-width: $bp-desktop) {
+      width: 393px;
+    }
   }
 }
